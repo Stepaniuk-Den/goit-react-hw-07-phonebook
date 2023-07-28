@@ -18,7 +18,7 @@ export const ContactForm = ({ onAddContact, onDublicate }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const contactData = { name: name, number: number };
+    const contactData = { name: name, phone: number };
     const isDublicate = onDublicate(name);
     isDublicate
       ? alert(`Attention! Name ${name} is already!`)

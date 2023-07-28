@@ -6,7 +6,7 @@ const Contact = ({ contact, onRemoveContact }) => {
   return (
     <StyledContact>
       <span>
-        {contact.name} : {contact.number}
+        {contact.name} : {contact.phone}
       </span>
       <button type="button" onClick={() => onRemoveContact(contact.id)}>
         Delete
@@ -18,7 +18,7 @@ Contact.propTypes = {
   onRemoveContact: PropTypes.func.isRequired,
   contact: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
   }).isRequired,
 }.isRequired;
 export default Contact;
